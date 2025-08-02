@@ -9,7 +9,7 @@ save_file_path = "data/quotes.csv"
 if __name__ == "__main__":
     # DataFrame Input Object
     quote_data = {
-        "Text": [],
+        "Quote": [],
         "Author": [],
         "Tags": [],
     }
@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
         for quote in quotes: 
             # Find Quote text
-            quote_data["Text"].append(quote.find("span", class_="text").text)
+            quote_data["Quote"].append(quote.find("span", class_="text").text)
 
             # Find Quote Author
             quote_data["Author"].append(quote.find("small", class_="author").text)
